@@ -18,14 +18,28 @@ body{
 }
 .experiment{
     display: flex;
-    flex-direction: row;
+    align-items: center;
     height: 6vw;
-    width: fit-content;
     background-color: #fff;
     font-size: 5vw;
     font-weight: 900;
     gap: 2vw;
+    width: 100vw;
+    white-space: nowrap;
+    text-align: left;
+    overflow: hidden;
 }
+.experiment div {
+    display: inline-block;
+    width: max-content;
+    flex-shrink: 0;
+    animation: experiment 5s linear infinite;
+}
+.experiment div:hover {
+    animation-play-state: paused;
+}
+
+
 .first-screen-body{
     display: flex;
     flex-direction: row;
@@ -60,17 +74,23 @@ body{
 }
 .tile-black{
     background-color: #000000;
+    transition: none;
+    animation: colorChange1 0.8s step-end infinite;
 }
 .tile-green{
     background-color: #00FFAE;
+    transition: none;
+    animation: colorChange2 0.8s step-end infinite;
 }
 .name{
-    display: flex;
-    flex-direction: column-reverse;
     font-family: "Notable";
     font-size: 19vw;
     color: #fff;
-    padding: 0 1vw;
+    padding: 1vw 1vw;
+    transition: color 0.3s ease-in-out;
+}
+.name:hover {
+    color: #1a072f;
 }
 .wheel{
     display: flex;
@@ -90,18 +110,67 @@ body{
 }
 .reaction{
     display: flex;
-    flex-direction: row;
+    align-items: center;
     height: 6vw;
-    width: fit-content;
     color:#fff;
     background-color: #000000;
     font-size: 5vw;
     font-weight: 900;
     gap: 2vw;
+    width: 100vw;
+    white-space: nowrap;
+    text-align: left;
+}
+.reaction div {
+    display: inline-block;
+    width: max-content;
+    flex-shrink: 0;
+    animation: reaction 4s linear infinite;
+}
+.reaction div:hover {
+    animation-play-state: paused;
 }
 
 @keyframes rotation{
     0%{transform: rotate (0);}
     
     100%{transform: rotate(360deg);}
+}
+@keyframes experiment {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes colorChange1 {
+    0% {
+         background-color: #000000; 
+        }
+    50% {
+         background-color: #00FFAE; 
+        }
+    100% {
+         background-color: #000000; 
+        }  
+}
+@keyframes colorChange2 {
+    0% {
+         background-color: #00FFAE; 
+        }
+    50% {
+         background-color: #000000; 
+        }
+    100% {
+         background-color: #00FFAE; 
+        }  
+}
+@keyframes reaction {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
