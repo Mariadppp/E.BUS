@@ -24,22 +24,14 @@ body{
     font-size: 5vw;
     font-weight: 900;
     gap: 2vw;
-    width: 100vw;
-    white-space: nowrap;
-    text-align: left;
     overflow: hidden;
-}
-.experiment div {
-    display: inline-block;
     width: max-content;
-    flex-shrink: 0;
-    animation: experiment 5s linear infinite;
+    animation: experiment 2s linear infinite;
 }
-.experiment div:hover {
+
+.experiment:hover {
     animation-play-state: paused;
 }
-
-
 .first-screen-body{
     display: flex;
     flex-direction: row;
@@ -117,18 +109,46 @@ body{
     font-size: 5vw;
     font-weight: 900;
     gap: 2vw;
-    width: 100vw;
-    white-space: nowrap;
-    text-align: left;
-}
-.reaction div {
-    display: inline-block;
     width: max-content;
-    flex-shrink: 0;
-    animation: reaction 4s linear infinite;
+    animation: reaction 2s linear infinite;
 }
-.reaction div:hover {
+.reaction:hover {
     animation-play-state: paused;
+}
+.second-screen{
+    width: 100vw;
+    height: 56vw;
+    display: flex;
+    flex-direction: row;
+    background-image: url('../assets/images/back1.svg');
+    background-size: cover;
+    background-color: #1a072f;
+}
+.box-circles{
+    display: flex;
+    flex-direction: column;
+    background-color: #00FFAE;
+    width: 16vw;
+    height: 56vw;
+    padding: 0 1vw;
+    gap: 1vw;
+    overflow: hidden;
+}
+.circle{
+    width: 14vw;
+    height: 14vw;
+    background-color: #AE00FF;
+    border-radius: 50%;
+    flex-shrink: 0;
+    animation: circles 1s linear infinite;
+}
+.circle2{
+    width: 14vw;
+    height: 14vw;
+    background-color: #AE00FF;
+    border-radius: 50%;
+    flex-shrink: 0;
+    animation: circles2 1s linear infinite;
 }
 
 @keyframes rotation{
@@ -138,10 +158,10 @@ body{
 }
 @keyframes experiment {
     0% {
-        transform: translateX(-50%);
+        transform: translateX(-39vw);
     }
     100% {
-        transform: translateX(0);
+        transform: translateX(0vw);
     }
 }
 @keyframes colorChange1 {
@@ -171,6 +191,22 @@ body{
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-50%);
+        transform: translateX(-50vw);
+    }
+}
+@keyframes circles {
+    0% {
+        transform: translateY(-15vw);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes circles2 {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-15vw);
     }
 }
