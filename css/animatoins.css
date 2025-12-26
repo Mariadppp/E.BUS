@@ -1,0 +1,78 @@
+@keyframes rotation{
+    0%{transform: rotate (0);}
+    
+    100%{transform: rotate(360deg);}
+}
+@keyframes experiment {
+    0% {
+        transform: translateX(-39vw);
+    }
+    100% {
+        transform: translateX(0vw);
+    }
+}
+@keyframes colorChange1 {
+    0% {
+         background-color: #000000; 
+        }
+    50% {
+         background-color: #00FFAE; 
+        }
+    100% {
+         background-color: #000000; 
+        }  
+}
+@keyframes colorChange2 {
+    0% {
+         background-color: #00FFAE; 
+        }
+    50% {
+         background-color: #000000; 
+        }
+    100% {
+         background-color: #00FFAE; 
+        }  
+}
+@keyframes reaction {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50vw);
+    }
+}
+@keyframes circles {
+    0% {
+        transform: translateY(-15vw);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes circles2 {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-15vw);
+    }
+}
+@keyframes road {
+    0% {
+        transform: translateY(-21vw);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes width {
+  0%{
+    width: 6vw;
+  }
+  50%{
+    width: 94vw;
+  }
+  100%{
+    width: 6vw;
+  }
+}

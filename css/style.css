@@ -1,5 +1,6 @@
 @import url('reset.css');
 @import url('font.css');
+@import url('animatoins.css');
 *{
     box-sizing: border-box;
     text-decoration: none;
@@ -15,6 +16,7 @@ body{
     width: 100vw;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 .experiment{
     display: flex;
@@ -42,10 +44,6 @@ body{
     background-color: #AE00FF;
     height: 39vw;
     width: 80vw;
-    img{
-        height: 39vw;
-        width: 80vw;
-    }
 }
 .welcome{
     display: flex;
@@ -64,6 +62,7 @@ body{
     gap: 0.53vw;
     background-color: #fff;
 }
+
 .tile-black{
     background-color: #000000;
     transition: none;
@@ -74,6 +73,7 @@ body{
     transition: none;
     animation: colorChange2 0.8s step-end infinite;
 }
+
 .name{
     font-family: "Notable";
     font-size: 19vw;
@@ -84,7 +84,7 @@ body{
 .name:hover {
     color: #1a072f;
 }
-.wheel{
+.wheel1{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -97,8 +97,7 @@ body{
         height: 36vw;
         width: 36vw;
         animation: rotation 2s linear infinite;
-    }
-    
+    }  
 }
 .reaction{
     display: flex;
@@ -117,9 +116,9 @@ body{
 }
 .second-screen{
     width: 100vw;
-    height: 56vw;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     background-image: url('../assets/images/back1.svg');
     background-size: cover;
     background-color: #1a072f;
@@ -152,68 +151,109 @@ body{
     border-radius: 50%;
     flex-shrink: 0;
     animation: circles2 1s linear infinite;
-
 }
 .circle2:hover{
     background-color: #fff;
 }
-
-@keyframes rotation{
-    0%{transform: rotate (0);}
+.square{
+    display: grid;
+    grid-template-columns: repeat(2, 6vw);
+    grid-template-rows: repeat(2, 6vw);
+}
+.tile-white{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    gap: 2vw;
+    overflow: hidden;
     
-    100%{transform: rotate(360deg);}
 }
-@keyframes experiment {
-    0% {
-        transform: translateX(-39vw);
-    }
-    100% {
-        transform: translateX(0vw);
+.tile-purple{
+    background-color: #AE00FF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vw;
+    overflow: hidden;
+}
+.black-item{
+    flex-shrink: 0;
+    background-color: #000000;
+    width: 4vw;
+    height: 5vw;
+    animation: road 1s linear infinite;
+}
+.white-item{
+    flex-shrink: 0;
+    background-color: #fff;
+    width: 4vw;
+    height: 5vw;
+    animation: road 1s linear infinite;
+}
+.third-screen{
+    display: flex;
+    flex-direction: column;
+    background-image: url('../assets/images/back2.svg');
+    background-size: cover;
+}
+.third-screen-one{
+    width: 100vw;
+}
+.block-one{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 84vw;
+    height: 25vw;
+    color:#fff;
+    background-color: #28EEAF;
+    font-family: 'Raboche-krestyanskiy';
+    font-size: 11vw;
+    letter-spacing: 1.5vw;
+    padding: 10vw;
+    transition: font-size 0.3s ease-in-out;
+}
+.block-one:hover{
+    font-size: 15vw;
+}
+.block-two{
+    display: grid;
+    grid-template-columns: repeat(2, 16vw);
+    grid-template-rows: repeat(2, 16vw);
+    justify-content: space-between;
+}
+.third-screen-two{
+    width: 100vw;
+    overflow: hidden;
+}
+.block-purple{
+    width: 94vw;
+    height: 13vw;
+    color:#fff;
+    background-color: #8E08CD;
+    animation: width 2s ease infinite;
+}
+.block-purple:hover{
+    background-color: #000000;
+}
+.wheel2{
+    width: fit-content;
+    img{
+        margin-top: 10%;
+        width: 30vw;
+        height: 30vw;
+        animation: rotation 2s linear infinite;
     }
 }
-@keyframes colorChange1 {
-    0% {
-         background-color: #000000; 
-        }
-    50% {
-         background-color: #00FFAE; 
-        }
-    100% {
-         background-color: #000000; 
-        }  
-}
-@keyframes colorChange2 {
-    0% {
-         background-color: #00FFAE; 
-        }
-    50% {
-         background-color: #000000; 
-        }
-    100% {
-         background-color: #00FFAE; 
-        }  
-}
-@keyframes reaction {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50vw);
-    }
-}
-@keyframes circles {
-    0% {
-        transform: translateY(-15vw);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-@keyframes circles2 {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(-15vw);
-    }
+footer{
+    width: 100vw;
+    font-family: 'Montserrat';
+    font-weight: 900;
+    background-color: #000000;
+    color:#fff;
+    padding: 3vw;
+    font-size: 4vw;
+    gap: 2vw;
 }
