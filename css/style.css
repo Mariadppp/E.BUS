@@ -280,27 +280,27 @@ footer{
 @media (orientation: portrait) {
     .welcome-screen{
         width: 60vw;
-        height: 80vw;
+        height: 160vw;
     }
     .name{
         font-size: 14vw;
     }
     .wheel1{
-        height: 80vw;
+        height: 160vw;
         width: 40vw;
         img{
-        height: 70vw;
-        width: 70vw;
+        height: 150vw;
+        width: 150vw;
         }  
     }
     .box-circles2{
         display: none;
     }
     .box-circles{
-        height: 80vw;
+        height: 160vw;
     }
     .second-screen{
-        height: 80vw;
+        height: 160vw;
     }
     .block-one{
         width: 54vw;
