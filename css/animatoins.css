@@ -76,3 +76,13 @@
     width: 6vw;
   }
 }
+@media (orientation: portrait) {
+    @keyframes circles{
+        0% {
+            transform: translateY(-49vw);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+}

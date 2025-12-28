@@ -297,7 +297,12 @@ footer{
     .box-circles2{
         display: none;
     }
+    .circle{
+        width: 48vw;
+        height: 48vw;
+    }
     .box-circles{
+        width: 50vw;
         height: 170vw;
     }
     .second-screen{
@@ -306,9 +311,25 @@ footer{
     .block-one{
         width: 54vw;
         height: 14vw;
+        font-size: 8vw;
+    }
+    .block-one:hover{
+        font-size: 10vw;
     }
     .square{
         grid-template-columns: repeat(2, 14vw);
         grid-template-rows: repeat(2, 14vw);
+    }
+    .third-screen{
+        height: 170vw;
+    }
+    .block-purple{
+        height: 19vw;
+    }
+    .wheel2{
+        img{
+        height: 45vw;
+        width: 45vw;
+        }
     }
 }
