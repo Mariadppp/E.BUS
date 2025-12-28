@@ -81,7 +81,9 @@ body{
     font-size: 19vw;
     color: #fff;
     padding: 1vw 1vw;
+    height: -webkit-fill-available;
     transition: color 0.3s ease-in-out;
+    justify-content: end;
 }
 .name:hover {
     color: #1a072f;
@@ -126,6 +128,16 @@ body{
     background-color: #1a072f;
 }
 .box-circles{
+    display: flex;
+    flex-direction: column;
+    background-color: #00FFAE;
+    width: 16vw;
+    height: 56vw;
+    padding: 0 1vw;
+    gap: 1vw;
+    overflow: hidden;
+}
+.box-circles2{
     display: flex;
     flex-direction: column;
     background-color: #00FFAE;
@@ -249,6 +261,11 @@ body{
         animation: rotation 2s linear infinite;
     }
 }
+.wheels{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 footer{
     width: 100vw;
     font-family: 'Montserrat';
@@ -262,27 +279,35 @@ footer{
 
 @media (orientation: portrait) {
     .welcome-screen{
-        width: 40vw;
+        width: 60vw;
         height: 80vw;
     }
     .name{
-        font-size: 9vw;
+        font-size: 14vw;
     }
     .wheel1{
         height: 80vw;
-        width: 10vw;
+        width: 40vw;
         img{
-        height: 18vw;
-        width: 18vw;
+        height: 70vw;
+        width: 70vw;
         }  
     }
+    .box-circles2{
+        display: none;
+    }
+    .box-circles{
+        height: 80vw;
+    }
     .second-screen{
-        width: 100%;
+        height: 80vw;
     }
-    .third-screen{
-        width: 100%;
+    .block-one{
+        width: 54vw;
+        height: 14vw;
     }
-    .footer{
-        width: 100%;
+    .square{
+        grid-template-columns: repeat(2, 14vw);
+        grid-template-rows: repeat(2, 14vw);
     }
 }
