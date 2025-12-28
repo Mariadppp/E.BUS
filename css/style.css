@@ -75,6 +75,8 @@ body{
 }
 
 .name{
+    display: flex;
+    flex-direction: column;
     font-family: "Notable";
     font-size: 19vw;
     color: #fff;
@@ -256,4 +258,31 @@ footer{
     padding: 3vw;
     font-size: 4vw;
     gap: 2vw;
+}
+
+@media (orientation: portrait) {
+    .welcome-screen{
+        width: 40vw;
+        height: 80vw;
+    }
+    .name{
+        font-size: 9vw;
+    }
+    .wheel1{
+        height: 80vw;
+        width: 10vw;
+        img{
+        height: 18vw;
+        width: 18vw;
+        }  
+    }
+    .second-screen{
+        width: 100%;
+    }
+    .third-screen{
+        width: 100%;
+    }
+    .footer{
+        width: 100%;
+    }
 }
